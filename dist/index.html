@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>*{margin:0; padding:0;}</style>
+    <style>*{margin:0; padding:0;}
+        
+        .nav {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display: flex;
+            z-index:200;
+        }
+
+        a {
+            display:block;
+            height: 100%;
+            width:33.33%;
+        }
+
+        .plano-container {
+            position:fixed;
+            height:100%;
+            width:100%;
+            background-color:rgb(233, 1, 1);
+            box-sizing: border-box;
+            padding:50px;
+            z-index:1;
+        }
+
+        .plano {
+            background-color:gray;
+            height:100%;
+            width:100%;
+            border:solid 1px red;
+        }</style>
 </head>
 <body>
     <script src="/app.c328ef1a.js"></script>
+    <div class="plano-container">
+        <div calss="plano">
+
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+    </div>
 </body>
 </html>
