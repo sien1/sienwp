@@ -18,12 +18,12 @@ mat2 rotate(float a) {
 void main() {
 
     vec3 map = vec3(vTextureCoord.xy,1.)*mappedMatrix;
-    vec2 uv = (map.xy - 0.5)*.5*vec2(0.5,2.) + 0.5 ;
+    vec2 uv = (map.xy - .5)*.5*vec2(2,2.) + 0.5 ;
 
     vec2 uvDivided = fract(uv*vec2(150.,1.));
     float progress = fract(uProgress);
 
-    vec2 uvDisplaced1 = uv + rotate(3.1415926/4.)*uvDivided*progress*0.1;
+    vec2 uvDisplaced1 = uv + rotate(3.1415926/4.)*uvDivided*progress*0.1*2.;
     vec2 uvDisplaced2 = uv + rotate(3.1415926/4.)*uvDivided*(1. - progress)*0.1;
 
     

@@ -42300,7 +42300,7 @@ if (typeof _deprecation2.default === 'function') {
 global.PIXI = exports; // eslint-disable-line
 
 },{"./polyfill":"node_modules/pixi.js/lib/polyfill/index.js","./core":"node_modules/pixi.js/lib/core/index.js","./deprecation":"node_modules/pixi.js/lib/deprecation.js","./accessibility":"node_modules/pixi.js/lib/accessibility/index.js","./extract":"node_modules/pixi.js/lib/extract/index.js","./extras":"node_modules/pixi.js/lib/extras/index.js","./filters":"node_modules/pixi.js/lib/filters/index.js","./interaction":"node_modules/pixi.js/lib/interaction/index.js","./loaders":"node_modules/pixi.js/lib/loaders/index.js","./mesh":"node_modules/pixi.js/lib/mesh/index.js","./particles":"node_modules/pixi.js/lib/particles/index.js","./prepare":"node_modules/pixi.js/lib/prepare/index.js"}],"shader/fragment.glsl":[function(require,module,exports) {
-module.exports = "#define GLSLIFY 1\n\nuniform sampler2D uSampler;\nuniform sampler2D uTextureOne;\nuniform sampler2D uTextureTwo;\nvarying vec2 vTextureCoord;\nuniform mat3 mappedMatrix;\nuniform vec2 uvAspect;\nuniform float uProgress;\n\nmat2 rotate(float a) {\n    float s = sin(a);\n    float c = cos(a);\n    return mat2(c, -s, s, c);\n}\n\nvoid main() {\n\n    vec3 map = vec3(vTextureCoord.xy,1.)*mappedMatrix;\n    vec2 uv = (map.xy - 0.5)*.5*vec2(0.5,2.) + 0.5 ;\n\n    vec2 uvDivided = fract(uv*vec2(150.,1.));\n    float progress = fract(uProgress);\n\n    vec2 uvDisplaced1 = uv + rotate(3.1415926/4.)*uvDivided*progress*0.1;\n    vec2 uvDisplaced2 = uv + rotate(3.1415926/4.)*uvDivided*(1. - progress)*0.1;\n\n    \n\n    //gl_FragColor = vec4(1.,1.,0.,1.);\n\n   //vec2 uv = vec2(vTextureCoord.x + sin(vTextureCoord.y*10.)/10., vTextureCoord.y);\n   vec4 im1 = texture2D(uTextureOne, uvDisplaced1);\n   vec4 im2 = texture2D(uTextureTwo, uvDisplaced2);\n\n   gl_FragColor = mix(im1, im2, progress);\n    //gl_FragColor =vec4(uvDivided,0.,1.);\n}";
+module.exports = "#define GLSLIFY 1\n\nuniform sampler2D uSampler;\nuniform sampler2D uTextureOne;\nuniform sampler2D uTextureTwo;\nvarying vec2 vTextureCoord;\nuniform mat3 mappedMatrix;\nuniform vec2 uvAspect;\nuniform float uProgress;\n\nmat2 rotate(float a) {\n    float s = sin(a);\n    float c = cos(a);\n    return mat2(c, -s, s, c);\n}\n\nvoid main() {\n\n    vec3 map = vec3(vTextureCoord.xy,1.)*mappedMatrix;\n    vec2 uv = (map.xy - .5)*.5*vec2(2,2.) + 0.5 ;\n\n    vec2 uvDivided = fract(uv*vec2(150.,1.));\n    float progress = fract(uProgress);\n\n    vec2 uvDisplaced1 = uv + rotate(3.1415926/4.)*uvDivided*progress*0.1*2.;\n    vec2 uvDisplaced2 = uv + rotate(3.1415926/4.)*uvDivided*(1. - progress)*0.1;\n\n    \n\n    //gl_FragColor = vec4(1.,1.,0.,1.);\n\n   //vec2 uv = vec2(vTextureCoord.x + sin(vTextureCoord.y*10.)/10., vTextureCoord.y);\n   vec4 im1 = texture2D(uTextureOne, uvDisplaced1);\n   vec4 im2 = texture2D(uTextureTwo, uvDisplaced2);\n\n   gl_FragColor = mix(im1, im2, progress);\n    //gl_FragColor =vec4(uvDivided,0.,1.);\n}";
 },{}],"node_modules/jquery/dist/jquery.js":[function(require,module,exports) {
 var global = arguments[3];
 var process = require("process");
@@ -58490,7 +58490,7 @@ var app = new PIXI.Application(window.innerWidth, window.innerHeight, {
 }); // The application will create a canvas element for you that you
 // can then insert into the DOM.
 
-document.body.appendChild(app.view);
+document.getElementById("plano-container").appendChild(app.view);
 var loader = PIXI.loader;
 loader.add('img0', img);
 loader.add('img1', img1);
@@ -58539,12 +58539,14 @@ loader.load(function (loader, resources) {
   (0, _jquery.default)('a').on('mouseover', function () {
     var to = (0, _jquery.default)(this).index();
 
-    _gsap.TweenMax.to(Filter.uniforms, 1, {
+    _gsap.TweenMax.to(Filter.uniforms, .5, {
       uProgress: to,
       easeOut: _gsap.Power3.easeOut,
       onUpdate: function onUpdate() {
-        // console.log(Filter.uniforms.uProgress);
         var number = Math.floor(Filter.uniforms.uProgress);
+        console.log(number); // console.log(Filter.uniforms.uProgress);
+        // let number = Math.floor(Filter.uniforms.uProgress);
+
         Filter.uniforms.uTextureOne = resources["img".concat(number)].texture;
 
         if (number < 2) {
@@ -58587,7 +58589,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59097" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62122" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

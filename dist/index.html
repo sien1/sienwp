@@ -28,46 +28,53 @@
             height:100%;
             width:100%;
             box-sizing: border-box;
-            padding:10px;
-            
             display:flex;
         }
 
         .plano {
-            background-color:rgb(255, 255, 255);
+            position: fixed;
+            top: 0; 
+            left:0;
             height:100%;
             width:100%;
             border-radius:3px;
-            border:double 4px rgb(174, 174, 174);
-            box-sizing: border-box;
-            box-shadow: 0px 15px 15px rgba(56, 54, 54, 0.699);
+            box-sizing: border-box; 
+            background-color:rgba(0, 0, 0, 0.397);
+        }
+
+        .plano .header {
+            width: 100%;
+            background-color:rgba(255, 255, 255, 0);
+            height:10%;
+            border-bottom:solid 1px rgb(175, 196, 202); 
         }
 
         .plano .footer {
             width:10vw;
             float:right;
-            background-color:white;
             height:100%;
-            border-left:solid 1px rgb(174, 174, 174);
             display:flex;
         }</style>
 </head>
 <body>
-    <script src="/app.c328ef1a.js"></script>
-    <div class="plano-container">
-        <div class="plano">
+    <div class="plano-container" id="plano-container">
+        <canvas id="ajacanvas"></canvas>
+
+        <div class="plano" id="plano">
+            <div class="header"></div>
             <div class="footer">
 
             </div>
         </div>
     </div>
 
+
+
     <div class="nav">
         <a href="#"></a>
         <a href="#"></a>
         <a href="#"></a>
     </div>
-    
-
+    <script src="/app.c328ef1a.js"></script>
 </body>
 </html>

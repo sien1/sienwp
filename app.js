@@ -16,7 +16,7 @@ const app = new PIXI.Application(window.innerWidth, window.innerHeight,{
  
 // The application will create a canvas element for you that you
 // can then insert into the DOM.
-document.body.appendChild(app.view);
+document.getElementById("plano-container").appendChild(app.view);
  
 
 let loader = PIXI.loader;
@@ -82,17 +82,23 @@ loader.load((loader, resources) => {
 
     $('a').on('mouseover', function(){
         let to = $(this).index();
-        TweenMax.to(Filter.uniforms, 1, {
+        TweenMax.to(Filter.uniforms, .5, {
             uProgress: to,
             easeOut: Power3.easeOut,
             onUpdate: ()=>{
-               // console.log(Filter.uniforms.uProgress);
                 let number = Math.floor(Filter.uniforms.uProgress);
+                console.log(number);
+
+               // console.log(Filter.uniforms.uProgress);
+                // let number = Math.floor(Filter.uniforms.uProgress);
                 Filter.uniforms.uTextureOne = resources[`img${number}`].texture;
+
                 if(number < 2) {
                     Filter.uniforms.uTextureTwo = resources[`img${number+1}`].texture;
                 }
             }})
+
+            
     });
 
 
