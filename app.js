@@ -16,7 +16,7 @@ const app = new PIXI.Application(window.innerWidth, window.innerHeight,{
  
 // The application will create a canvas element for you that you
 // can then insert into the DOM.
-document.getElementById("plano-container").appendChild(app.view);
+//document.getElementById("plano-container").appendChild(app.view);
  
 
 let loader = PIXI.loader;
@@ -33,7 +33,7 @@ loader.load((loader, resources) => {
 
     // smokeFilter = new PIXI.Filter(null, fragment);
 
-    // smokeFilter
+    // smokeFilter  
     Filter.apply = function(filterManager, input, output, clear) {
         const matrix = new PIXI.Matrix();
         this.uniforms.mappedMatrix = filterManager.calculateNormalizedScreenSpaceMatrix(matrix);
@@ -48,7 +48,7 @@ loader.load((loader, resources) => {
     };
     // This creates a texture from a 'bunny.png' image.
     const bunny = new PIXI.Sprite(resources.img0.texture);
-    
+
     // Setup the position of the bunny
     // bunny.x = app.renderer.width / 2;
     // bunny.y = app.renderer.height / 2;
@@ -57,7 +57,7 @@ loader.load((loader, resources) => {
 
     let winAspect = $(window).width()/$(window).height();
     
-    let imageAspect = resources.img1.texture.width/resources.img1.texture.height;
+   // let imageAspect = resources.img1.texture.width/resources.img1.texture.height;
 
     if(winAspect > imageAspect) {
         Filter.uniforms.uvAspect = {x:1.,y:imageAspect/winAspect};
@@ -67,9 +67,9 @@ loader.load((loader, resources) => {
     }
 
     //FILTERS
-    bunny.filters = [Filter];
+    //bunny.filters = [Filter];
 
-    //Filter.uniforms.uTextureOne   = resources.img0.texture;
+    Filter.uniforms.uTextureOne   = resources.img0.texture;
     Filter.uniforms.uTextureTwo   = resources.img1.texture;
     Filter.uniforms.uTextureThree = resources.img2.texture;
     Filter.uniforms.uProgress = 0.;
@@ -78,30 +78,25 @@ loader.load((loader, resources) => {
  
     // Add the bunny to the scene we are building.
     app.stage.addChild(bunny);
-
+    
 
     $('a').on('mouseover', function(){
         let to = $(this).index();
         TweenMax.to(Filter.uniforms, .5, {
-            uProgress: to,
-            easeOut: Power3.easeOut,
-            onUpdate: ()=>{
-                let number = Math.floor(Filter.uniforms.uProgress);
-                console.log(number);
+        uProgress: to,
+        easeOut: Power3.easeOut,
+        onUpdate: () => {
+            let number = Math.floor(Filter.uniforms.uProgress); 
+            // console.log(Filter.uniforms.uProgress);
+            Filter.uniforms.uTextureOne = resources[`img${number}`].texture;
 
-               // console.log(Filter.uniforms.uProgress);
-                // let number = Math.floor(Filter.uniforms.uProgress);
-                Filter.uniforms.uTextureOne = resources[`img${number}`].texture;
-
-                if(number < 2) {
-                    Filter.uniforms.uTextureTwo = resources[`img${number+1}`].texture;
-                }
-            }})
-
-            
+            if(number < 2) {
+                Filter.uniforms.uTextureTwo = resources[`img${number + 1}`].texture;
+            }
+        }})
     });
 
-
+    
  
     // Listen for frame updates
     app.ticker.add(() => {

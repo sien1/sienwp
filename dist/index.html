@@ -3,17 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:900&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>*{margin:0; padding:0;}
         
-        .nav {
-            position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            display: flex;
-        }
 
         a {
             display:block;
@@ -29,24 +22,24 @@
             width:100%;
             box-sizing: border-box;
             display:flex;
+            z-index:97;
+            background:linear-gradient(45deg, rgba(51, 51, 51, 0.534), rgba(236, 0, 12, 0.945));
         }
 
         .plano {
             position: fixed;
-            top: 0; 
+            top: 0;
             left:0;
             height:100%;
             width:100%;
             border-radius:3px;
-            box-sizing: border-box; 
-            background-color:rgba(0, 0, 0, 0.397);
+            box-sizing: border-box;
         }
 
         .plano .header {
             width: 100%;
             background-color:rgba(255, 255, 255, 0);
             height:10%;
-            border-bottom:solid 1px rgb(175, 196, 202); 
         }
 
         .plano .footer {
@@ -54,26 +47,99 @@
             float:right;
             height:100%;
             display:flex;
+        }
+
+        .plano .banner {
+            position: fixed;
+            left:0;
+            top:0;
+            width:20.17%;
+            height:100%;
+            z-index:99;
+            background-color: rgb(29, 26, 26);
+        }
+
+        .plano .letters1 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 158px;
+            text-shadow:1px  1px#fff, 
+            -1px  1px     #fff, 
+             1px -1px     #fff, 
+            -1px -1px     #fff,
+             1px  1px 5px #555;
+            z-index:900;
+            top:20%;
+            left:-2.5%;
+            color:rgba(226, 64, 0, 0.116);
+            position:fixed;
+        }
+
+        .parker{
+            height:100%; 
+            width:100%;
+            z-index:100;
+            top:0;
+            left:0;
+            position:fixed;
+        }
+
+        .parker .nav {
+            
+            width:100%;
+            height:15%;
+            display: flex;
+            flex-direction:row;
+            
+        }
+
+        .parker .nav .brand {
+            width:11.25%;
+        }
+
+        .parker .nav ul {
+            list-style-type: none;
+            padding-top:4%;
+            padding-left:9%;
+            width:50%;  
+        }
+          
+        .nav ul li {
+            display: inline;
+        }
+
+        .nav ul li a {
+            display:inline;
+        }
+
+        .parker .contenido {
+            height:85%;
+            width:100%;
+            padding-left:11.25%;
+            padding-top:5%;
         }</style>
 </head>
 <body>
     <div class="plano-container" id="plano-container">
-        <canvas id="ajacanvas"></canvas>
-
         <div class="plano" id="plano">
+            <div class="letters1"><img src="/noheart.136949bc.svg" alt=""></div>
+            <section class="banner"></section>
             <div class="header"></div>
-            <div class="footer">
-
+            <div class="footer"></div>
+        </div>
+        <div class="parker">
+            <div class="nav">
+                <div class="brand"></div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="contenido">
+                <img src="/noheart2.8fc9fb31.svg" alt="">
             </div>
         </div>
-    </div>
-
-
-
-    <div class="nav">
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
     </div>
     <script src="/app.c328ef1a.js"></script>
 </body>

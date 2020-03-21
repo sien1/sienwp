@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="5in" height="2in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 1500 11000 5000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="406" font-variant="normal" class="str0" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Bebas Neue">
+		<font-face-src>
+			<font-face-name name="BebasNeue"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="n" horiz-adv-x="426" d="M275 0l113 0 0 700.001 -98.0004 0 0 -419.001 -1.99904 0 -111.001 419.001 -138 0 0 -700.001 99.0005 0 0 507 2.00022 0 135 -507z"/>
+   <glyph unicode="e" horiz-adv-x="367" d="M150 600l190 0 0 100.001 -300.001 0 0 -700.001 300.001 0 0 100.001 -190 0 0 204.999 150.999 0 0 100.001 -150.999 0 0 194.999z"/>
+   <glyph unicode="g" horiz-adv-x="390" d="M205.001 289.999l49.9997 0 0 -128.999c0,-50.0009 -22.0001,-68.0005 -57.0005,-68.0005 -34.9992,0 -56.9993,17.9997 -56.9993,68.0005l0 378c0,49.9997 22.0001,68.9995 56.9993,68.9995 35.0004,0 57.0005,-18.9998 57.0005,-68.9995l0 -75.0001 104 0 0 67.9994c0,112.001 -56.0004,176.001 -164.001,176.001 -107.999,0 -164,-64.0001 -164,-176.001l0 -364c0,-112 56.0004,-176 164,-176 108,0 164.001,64.0001 164.001,176l0 222 -154 0 0 -100.001z"/>
+   <glyph unicode="a" horiz-adv-x="406" d="M284 700.001l-161 0 -112 -700.001 101 0 19.001 127 135 0 18.9998 -127 110.999 0 -112 700.001zm-87.0003 -124.001l2.00022 0 51.9999 -354 -106 0 51.9999 354z"/>
+   <glyph unicode="r" horiz-adv-x="402" d="M382 0c-11.0001,26.0006 -12.0002,50.9998 -12.0002,85.0001l0 108c0,72.9999 -17.9997,125 -72.9999,148l0 1.99904c48.9996,23.0002 71.9998,69.0007 71.9998,141l0 55.0003c0,108 -48.9996,161 -163.001,161l-166 0 0 -700.001 110.001 0 0 285 37.9995 0c49.9997,0 71.9998,-24.0003 71.9998,-89.0005l0 -109.999c0,-57.0005 4.00045,-68.0005 9.99994,-86.0002l112.001 0zm-179 600c38.9997,0 55.9992,-22.0001 55.9992,-71.9998l0 -69.0007c0,-55.9992 -24.9993,-74 -65.9991,-74l-43.0001 0 0 215.001 53 0z"/>
+   <glyph unicode="i" horiz-adv-x="190" d="M39.9998 0l110.001 0 0 700.001 -110.001 0 0 -700.001z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Bebas Neue";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str0 {stroke-width:0.901575}
+    .str1 {stroke:#DBD2D5;stroke-width:3}
+    .fil0 {fill:white}
+    .fnt0 {font-weight:bold;font-size:2534.27px;font-family:'Bebas Neue'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g transform="matrix(0.958086 0 0 1 -5314.69 -3135.47)">
+   <text x="5400" y="8500"  class="fil0 str1 fnt0">i</text>
+   <text x="6165" y="8500"  class="fil0 str1 fnt0">n</text>
+   <text x="7619" y="8500"  class="fil0 str1 fnt0">g</text>
+   <text x="8951" y="8500"  class="fil0 str1 fnt0">e</text>
+   <text x="10209" y="8500"  class="fil0 str1 fnt0">n</text>
+   <text x="11663" y="8500"  class="fil0 str1 fnt0">i</text>
+   <text x="12328" y="8500"  class="fil0 str1 fnt0">e</text>
+   <text x="13586" y="8500"  class="fil0 str1 fnt0">r</text>
+   <text x="14957" y="8500"  class="fil0 str1 fnt0">i</text>
+   <text x="15622" y="8500"  class="fil0 str1 fnt0">a</text>
+  </g>
+ </g>
+</svg>
