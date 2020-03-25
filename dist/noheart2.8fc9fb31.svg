@@ -23,9 +23,9 @@ viewBox="0 1500 11000 5000"
   <style type="text/css">
    <![CDATA[
     @font-face { font-family:"Bebas Neue";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
-    .str0 {stroke-width:0.901575}
-    .str1 {stroke:#DBD2D5;stroke-width:3}
-    .fil0 {fill:white}
+    .str0 {stroke-width:1.901575}
+    .str1 {stroke:none;stroke-width:5}
+    .fil0 {fill:rgb(255, 90, 4)}
     .fnt0 {font-weight:bold;font-size:2534.27px;font-family:'Bebas Neue'}
    ]]>
   </style>
@@ -33,16 +33,16 @@ viewBox="0 1500 11000 5000"
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <g transform="matrix(0.958086 0 0 1 -5314.69 -3135.47)">
-   <text x="5400" y="8500"  class="fil0 str1 fnt0">i</text>
-   <text x="6165" y="8500"  class="fil0 str1 fnt0">n</text>
-   <text x="7619" y="8500"  class="fil0 str1 fnt0">g</text>
-   <text x="8951" y="8500"  class="fil0 str1 fnt0">e</text>
-   <text x="10209" y="8500"  class="fil0 str1 fnt0">n</text>
-   <text x="11663" y="8500"  class="fil0 str1 fnt0">i</text>
-   <text x="12328" y="8500"  class="fil0 str1 fnt0">e</text>
-   <text x="13586" y="8500"  class="fil0 str1 fnt0">r</text>
-   <text x="14957" y="8500"  class="fil0 str1 fnt0">i</text>
-   <text x="15622" y="8500"  class="fil0 str1 fnt0">a</text>
+   <text x="5400" y="8500"  class="fil0 str1 fnt0">I</text>
+   <text x="6165" y="8500"  class="fil0 str1 fnt0">N</text>
+   <text x="7619" y="8500"  class="fil0 str1 fnt0">G</text>
+   <text x="8951" y="8500"  class="fil0 str1 fnt0">E</text>
+   <text x="10209" y="8500"  class="fil0 str1 fnt0">N</text>
+   <text x="11663" y="8500"  class="fil0 str1 fnt0">I</text>
+   <text x="12328" y="8500"  class="fil0 str1 fnt0">E</text>
+   <text x="13586" y="8500"  class="fil0 str1 fnt0">R</text>
+   <text x="14957" y="8500"  class="fil0 str1 fnt0">I</text>
+   <text x="15622" y="8500"  class="fil0 str1 fnt0">A</text>
   </g>
  </g>
 </svg>

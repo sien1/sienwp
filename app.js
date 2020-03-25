@@ -17,8 +17,6 @@ const app = new PIXI.Application(window.innerWidth, window.innerHeight,{
 // The application will create a canvas element for you that you
 // can then insert into the DOM.
 //document.getElementById("plano-container").appendChild(app.view);
- 
-
 let loader = PIXI.loader;
 loader.add('img0', img);
 loader.add('img1', img1);
@@ -27,7 +25,6 @@ loader.add('img2', img2);
 
 // load the texture we need
 loader.load((loader, resources) => {
-    
 
     let Filter = new PIXI.Filter(null, fragment);
 
@@ -57,7 +54,7 @@ loader.load((loader, resources) => {
 
     let winAspect = $(window).width()/$(window).height();
     
-   // let imageAspect = resources.img1.texture.width/resources.img1.texture.height;
+    let imageAspect = resources.img1.texture.width/resources.img1.texture.height;
 
     if(winAspect > imageAspect) {
         Filter.uniforms.uvAspect = {x:1.,y:imageAspect/winAspect};
@@ -67,7 +64,7 @@ loader.load((loader, resources) => {
     }
 
     //FILTERS
-    //bunny.filters = [Filter];
+    bunny.filters = [Filter];
 
     Filter.uniforms.uTextureOne   = resources.img0.texture;
     Filter.uniforms.uTextureTwo   = resources.img1.texture;
@@ -78,7 +75,6 @@ loader.load((loader, resources) => {
  
     // Add the bunny to the scene we are building.
     app.stage.addChild(bunny);
-    
 
     $('a').on('mouseover', function(){
         let to = $(this).index();
@@ -86,7 +82,7 @@ loader.load((loader, resources) => {
         uProgress: to,
         easeOut: Power3.easeOut,
         onUpdate: () => {
-            let number = Math.floor(Filter.uniforms.uProgress); 
+            let number = Math.floor(Filter.uniforms.uProgress);
             // console.log(Filter.uniforms.uProgress);
             Filter.uniforms.uTextureOne = resources[`img${number}`].texture;
 
@@ -96,8 +92,6 @@ loader.load((loader, resources) => {
         }})
     });
 
-    
- 
     // Listen for frame updates
     app.ticker.add(() => {
         Filter.uniforms.uTime += 0.01;

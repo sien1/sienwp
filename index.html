@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Heebo:900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         *{margin:0; padding:0;}
@@ -24,7 +24,7 @@
             box-sizing: border-box;
             display:flex;
             z-index:97;
-            background:linear-gradient(45deg, rgba(51, 51, 51, 0.534), rgba(236, 0, 12, 0.945));
+            /*background:linear-gradient(45deg, rgb(51, 45, 45), rgb(255, 0, 0));*/
         }
 
         .plano {
@@ -57,7 +57,7 @@
             width:20.17%;
             height:100%;
             z-index:99;
-            background-color: rgb(29, 26, 26);
+            background-color: rgba(17, 16, 16, 0.692);
         }
 
         .plano .letters1 {
@@ -65,7 +65,7 @@
             font-size: 158px;
             text-shadow:1px  1px#fff, 
             -1px  1px     #fff, 
-             1px -1px     #fff, 
+             1px -1px     #fff,
             -1px -1px     #fff,
              1px  1px 5px #555;
             z-index:900;
@@ -85,38 +85,59 @@
         }
 
         .parker .nav {
-            
             width:100%;
             height:15%;
             display: flex;
             flex-direction:row;
-            
         }
 
         .parker .nav .brand {
-            width:11.25%;
+            width:28.5%;
+            display: flex;
+        }
+
+        .parker .nav .hire {
+            background-color:rgb(247, 61, 4);
+            list-style-type: none;
+            padding-top:3%;
+            width:20%;
         }
 
         .parker .nav ul {
             list-style-type: none;
-            padding-top:4%;
+            padding-top:3%;
             padding-left:9%;
-            width:50%;  
+            width: 60%;
+            padding-left:20%;
         }
           
         .nav ul li {
             display: inline;
+            
         }
 
         .nav ul li a {
             display:inline;
+            text-decoration: none;
+            color:white;
+            font-weight: 400;
+            font-size: 12px;
+            margin:1%;
+            font-family: 'Oswald', sans-serif;
         }
 
         .parker .contenido {
             height:85%;
             width:100%;
             padding-left:11.25%;
-            padding-top:5%;
+            padding-top:3%;
+            color:white;
+        }
+
+        .parker .contenido h3 {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            font-size: 30px;
+            font-weight: 400;
         }
     </style>
 </head>
@@ -130,19 +151,28 @@
         </div>
         <div class="parker">
             <div class="nav">
-                <div class="brand"></div>
+                <div class="brand">
+                    <img src="logotipo.svg" alt="">
+                </div>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#news">NEWS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#about">ABOUT</a></li>
                 </ul>
+                <div class="hire">
+                    <ul>
+                        <li><a href="#hire">COTIZA</a></li>
+                        <li><a href="#meow">CONT</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="contenido">
                 <img src="noheart2.svg" alt="">
+                <h3></h3>
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
 </body>
 </html>
