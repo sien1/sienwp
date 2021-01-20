@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gsap": "^3.2.4",
+    "gsap": "^3.6.0",
     "jquery": "^3.4.1",
     "pixi.js": "^4.8.7"
   },
